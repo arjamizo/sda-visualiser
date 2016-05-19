@@ -1,0 +1,10 @@
+# How to run this project
+
+0. Download and setup Eclipse
+1. `git clone` this repository
+2. Create new project in Eclipse (e.g. Mars)
+3. Create new Java Project
+4. Right click on project, `add>folder>advanced>link to an existing folder` and name this folder src
+5. Right click on a `Visualiser.java` Java class and click `Run as>Java application`
+6. Modify as much as you want.
+
