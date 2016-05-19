@@ -45,11 +45,11 @@ public class Visualiser extends JFrame {
 	    setLocationRelativeTo(null);
 	    setDefaultCloseOperation(EXIT_ON_CLOSE);
 	    setLayout(new FlowLayout());
-        JButtonFluent button = new JButtonFluent();
-        add(new JButtonFluent().setLabelFluent("Task 1").addActionListenerFluent(new ActionListener() {
+        final String exp = "1 2 + 6 +";
+        add(new JButtonFluent().setLabelFluent("Calculate: " + exp).addActionListenerFluent(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
-                	System.out.println(123);
+                	Calculator.RPN(exp, content);
                 } catch (Throwable ex) {
                     Logger.getLogger(Window.class.getName()).log(Level.SEVERE, null, ex);
                     throw new RuntimeException(ex);
@@ -69,7 +69,7 @@ public class Visualiser extends JFrame {
 				public void run() {
 					while(true) {
 						try {
-							System.out.println(new Date().toString());
+//							System.out.println(new Date().toString());
 							listModel.clear();
 							for (String string : content) {								
 								listModel.addElement(string);
@@ -117,7 +117,7 @@ public class Visualiser extends JFrame {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			vis.content.add(new Date().toString());
+//			vis.content.add(new Date().toString());
 		}
 	}
 
